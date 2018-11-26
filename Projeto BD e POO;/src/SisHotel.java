@@ -7,7 +7,7 @@ public interface SisHotel {
 	//
 	public void proprietario();
 	//
-	public void vagas(int Descrisao);
+	public void vagas(int Descricao);
 	//
 	public Hospede hospede(String Status);
 	
