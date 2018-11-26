@@ -2,6 +2,9 @@ import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Proprietario {
@@ -10,6 +13,11 @@ public class Proprietario {
 	private int Id_Proprietario;
 	private int contato;
 	private String Nome;
+	@ManyToMany
+	@JoinTable(
+					name = "Proprietario",
+					joinColumns = @JoinColumn(name = "Endereco"),
+					inverseJoinColumns = @JoinColumn(name = "Id_Proprietario"))
 	private Set <Hotel> tem;
 	
 	public int getId_Proprietario() {

@@ -3,7 +3,14 @@ public interface SisHotel {
 	
 	public Hotel hotel(Reserva reserva, Empregados empregados, Proprietario proprietario, Vagas vagas);
 	//
-	public void empregardos()
+	public void empregardos(Reserva reserva, Hotel hotel);
+	//
+	public void proprietario();
+	//
+	public void vagas(int Descrisao);
+	//
+	public Hospede hospede(String Status);
+	
 	
 	
 

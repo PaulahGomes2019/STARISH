@@ -1,5 +1,8 @@
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class TipoDeQuarto {
@@ -7,6 +10,12 @@ public class TipoDeQuarto {
 	@Id
 	private int Id_TipoDeQuarto;
 	private String Descricao;
+	
+	@ManyToMany
+	@JoinTable(
+					name = "Vagas",
+					joinColumns = @JoinColumn(name = "Num_Vagas"),
+					inverseJoinColumns = @JoinColumn(name = "Id_TipoDeQuarto"))
 	
 	public int getId_TipoDeQuarto() {
 		return Id_TipoDeQuarto;

@@ -2,6 +2,9 @@ import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Vagas {
@@ -10,6 +13,12 @@ public class Vagas {
 	private int Num_Vagas;
 	private int Tempo;
 	private int Valor;
+	
+	@ManyToMany
+	@JoinTable(
+					name = "TipoDeQuarto",
+					joinColumns = @JoinColumn(name = "Id_TipoDeQuarto"),
+					inverseJoinColumns = @JoinColumn(name = "Num_Vagas"))
 	private Set <TipoDeQuarto> tem;
 	
 	public int getNum_Vagas() {

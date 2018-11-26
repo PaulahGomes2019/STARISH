@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 
+import javax.jws.Oneway;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Hospede {
