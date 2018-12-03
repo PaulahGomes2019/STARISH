@@ -91,4 +91,8 @@ public class Hospede {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	public void setFaz(long l) {
+		// TODO Auto-generated method stub
+		
+	}
 }
