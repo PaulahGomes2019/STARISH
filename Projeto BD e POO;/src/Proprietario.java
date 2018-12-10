@@ -13,11 +13,13 @@ public class Proprietario {
 	private int Id_Proprietario;
 	private int contato;
 	private String Nome;
+	
 	@ManyToMany
 	@JoinTable(
 					name = "Proprietario",
 					joinColumns = @JoinColumn(name = "Endereco"),
 					inverseJoinColumns = @JoinColumn(name = "Id_Proprietario"))
+	
 	private Set <Hotel> tem;
 	
 	public int getId_Proprietario() {

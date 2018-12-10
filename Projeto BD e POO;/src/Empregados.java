@@ -3,10 +3,8 @@ import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-
 @Entity
 public class Empregados {
-	
 	
 	@Id
 	private int Id_Empregados;
@@ -26,6 +24,7 @@ public class Empregados {
 		result = prime * result + ((tem == null) ? 0 : tem.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
