@@ -19,6 +19,7 @@ public class Vagas {
 					name = "TipoDeQuarto",
 					joinColumns = @JoinColumn(name = "Id_TipoDeQuarto"),
 					inverseJoinColumns = @JoinColumn(name = "Num_Vagas"))
+	
 	private Set <TipoDeQuarto> tem;
 	
 	public int getNum_Vagas() {
